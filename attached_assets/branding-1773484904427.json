@@ -1,0 +1,153 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Segoe UI",
+      "role": "body"
+    },
+    {
+      "family": "Helvetica",
+      "role": "body"
+    },
+    {
+      "family": "Arial",
+      "role": "body"
+    }
+  ],
+  "colors": {
+    "primary": "#00E0E0",
+    "accent": "#FFD700",
+    "background": "#FFFFFF",
+    "textPrimary": "#0D0D0D",
+    "link": "#FFD700"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Segoe UI",
+      "heading": "Segoe UI"
+    },
+    "fontStacks": {
+      "heading": [
+        "ui-sans-serif",
+        "-apple-system",
+        "system-ui",
+        "Segoe UI",
+        "Helvetica",
+        "Apple Color Emoji",
+        "Arial",
+        "sans-serif"
+      ],
+      "body": [
+        "ui-sans-serif",
+        "-apple-system",
+        "system-ui",
+        "Segoe UI",
+        "Helvetica",
+        "Apple Color Emoji",
+        "Arial",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "ui-sans-serif",
+        "-apple-system",
+        "system-ui",
+        "Segoe UI",
+        "Helvetica",
+        "Apple Color Emoji",
+        "Arial",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "28px",
+      "h2": "24px",
+      "body": "14px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 8,
+    "borderRadius": "8px"
+  },
+  "components": {
+    "buttonPrimary": {
+      "background": "#FFFFFF",
+      "textColor": "#0D0D0D",
+      "borderColor": "#D9D9D9",
+      "borderRadius": "33554400px",
+      "borderRadiusCorners": {
+        "topLeft": "33554400px",
+        "topRight": "33554400px",
+        "bottomRight": "33554400px",
+        "bottomLeft": "33554400px"
+      },
+      "shadow": "none"
+    },
+    "buttonSecondary": {
+      "background": "#0D0D0D",
+      "textColor": "#FFFFFF",
+      "borderRadius": "33554400px",
+      "borderRadiusCorners": {
+        "topLeft": "33554400px",
+        "topRight": "33554400px",
+        "bottomRight": "33554400px",
+        "bottomLeft": "33554400px"
+      },
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "File saved at: attached_assets/logo.svg",
+    "favicon": "https://chatgpt.com/favicon.ico",
+    "ogImage": "File saved at: attached_assets/ogImage.png",
+    "logoHref": "File saved at: attached_assets/logoHref.html"
+  },
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Selected #0 because it is located in the header, is visible, and links to the homepage, which are strong indicators of a primary brand logo.",
+    "confidence": 0.9,
+    "source": "llm"
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": 0,
+      "text": "Sign up for free",
+      "reasoning": "The button 'Sign up for free' is likely the primary CTA due to its action-oriented text and prominence in encouraging user engagement."
+    },
+    "secondary": {
+      "index": 2,
+      "text": "Log in",
+      "reasoning": "The button 'Log in' serves as a secondary action, allowing users to access their accounts, and it has a different background color from the primary button."
+    },
+    "confidence": 0.95
+  },
+  "personality": {
+    "tone": "modern",
+    "energy": "medium",
+    "targetAudience": "tech-savvy individuals"
+  },
+  "designSystem": {
+    "framework": "tailwind",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0.95,
+    "colors": 0.9,
+    "overall": 0.925
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 0,
+        "selectedLogoReasoning": "Selected #0 because it is located in the header, is visible, and links to the homepage, which are strong indicators of a primary brand logo.",
+        "confidence": 0.9
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": true,
+      "llmSucceeded": true
+    }
+  }
+}

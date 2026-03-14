@@ -1,0 +1,168 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Anthropic Sans",
+      "role": "body"
+    },
+    {
+      "family": "Anthropic Serif",
+      "role": "heading"
+    },
+    {
+      "family": "Roboto",
+      "role": "body"
+    },
+    {
+      "family": "Helvetica",
+      "role": "body"
+    },
+    {
+      "family": "Arial",
+      "role": "body"
+    }
+  ],
+  "colors": {
+    "primary": "#1A73E8",
+    "accent": "#141413",
+    "background": "#FAF9F5",
+    "textPrimary": "#141413",
+    "link": "#ABB2BF"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Anthropic Sans",
+      "heading": "Anthropic Serif"
+    },
+    "fontStacks": {
+      "heading": [
+        "Anthropic Serif",
+        "Georgia",
+        "Times New Roman",
+        "serif"
+      ],
+      "body": [
+        "Anthropic Sans",
+        "system-ui",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica",
+        "Arial",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Anthropic Sans",
+        "system-ui",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica",
+        "Arial",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "36px",
+      "h2": "56px",
+      "body": "12px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "8px"
+  },
+  "components": {
+    "input": {
+      "background": "#FFFFFF",
+      "textColor": "#141413",
+      "borderColor": "#D9D8D5",
+      "borderRadius": "9.6px",
+      "borderRadiusCorners": {
+        "topLeft": "9.6px",
+        "topRight": "9.6px",
+        "bottomRight": "9.6px",
+        "bottomLeft": "9.6px"
+      },
+      "shadow": "none"
+    },
+    "buttonPrimary": {
+      "background": "#141413",
+      "textColor": "#FFFFFF",
+      "borderRadius": "9.6px",
+      "borderRadiusCorners": {
+        "topLeft": "9.6px",
+        "topRight": "9.6px",
+        "bottomRight": "9.6px",
+        "bottomLeft": "9.6px"
+      },
+      "shadow": "none"
+    },
+    "buttonSecondary": {
+      "background": "transparent",
+      "textColor": "#141413",
+      "borderColor": "#B8B7B4",
+      "borderRadius": "9.6px",
+      "borderRadiusCorners": {
+        "topLeft": "9.6px",
+        "topRight": "9.6px",
+        "bottomRight": "9.6px",
+        "bottomLeft": "9.6px"
+      },
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "File saved at: attached_assets/logo.svg",
+    "favicon": "File saved at: attached_assets/favicon.svg",
+    "ogImage": "https://claude.ai/images/claude_ogimage.png",
+    "logoHref": "File saved at: attached_assets/logoHref.html"
+  },
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Selected #0 because it is located in the header, is visible, and matches the brand inferred from the page title and URL ('Claude').",
+    "confidence": 0.9,
+    "source": "llm"
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": 0,
+      "text": "Try Claude",
+      "reasoning": "Button #1 ('Try Claude') has a dark background (#141413) with white text, making it stand out as a primary CTA. The text 'Try Claude' is action-oriented, suggesting a primary action for users."
+    },
+    "secondary": {
+      "index": 8,
+      "text": "Download desktop app",
+      "reasoning": "Button #0 ('Download desktop app') has a transparent background with a border, making it a suitable secondary action. It contrasts with the primary button's dark background."
+    },
+    "confidence": 0.95
+  },
+  "personality": {
+    "tone": "modern",
+    "energy": "medium",
+    "targetAudience": "tech-savvy professionals"
+  },
+  "designSystem": {
+    "framework": "tailwind",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0.95,
+    "colors": 0.9,
+    "overall": 0.925
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 0,
+        "selectedLogoReasoning": "Selected #0 because it is located in the header, is visible, and matches the brand inferred from the page title and URL ('Claude').",
+        "confidence": 0.9
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": true,
+      "llmSucceeded": true
+    }
+  }
+}

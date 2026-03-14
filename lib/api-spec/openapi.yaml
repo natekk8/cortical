@@ -1,0 +1,218 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: Cortical AI Chat API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: chats
+    description: Chat operations
+  - name: messages
+    description: Message operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /chats:
+    get:
+      operationId: getChats
+      tags: [chats]
+      summary: Get all chats for a user
+      parameters:
+        - name: userId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of chats
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Chat"
+    post:
+      operationId: createChat
+      tags: [chats]
+      summary: Create a new chat session
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateChatRequest"
+      responses:
+        "201":
+          description: Chat created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Chat"
+  /chats/{chatId}:
+    delete:
+      operationId: deleteChat
+      tags: [chats]
+      summary: Delete a chat
+      parameters:
+        - name: chatId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Deleted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DeleteResponse"
+  /chats/{chatId}/messages:
+    get:
+      operationId: getMessages
+      tags: [messages]
+      summary: Get messages for a chat
+      parameters:
+        - name: chatId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of messages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Message"
+    post:
+      operationId: saveMessage
+      tags: [messages]
+      summary: Save a message to a chat
+      parameters:
+        - name: chatId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveMessageRequest"
+      responses:
+        "201":
+          description: Message saved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    Chat:
+      type: object
+      properties:
+        id:
+          type: string
+        userId:
+          type: string
+        title:
+          type: string
+        model:
+          type: string
+          enum: [lite, max]
+        systemPrompt:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - userId
+        - title
+        - model
+        - createdAt
+        - updatedAt
+    CreateChatRequest:
+      type: object
+      properties:
+        userId:
+          type: string
+        title:
+          type: string
+        model:
+          type: string
+          enum: [lite, max]
+        systemPrompt:
+          type: string
+      required:
+        - userId
+        - title
+        - model
+    Message:
+      type: object
+      properties:
+        id:
+          type: string
+        chatId:
+          type: string
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - chatId
+        - role
+        - content
+        - createdAt
+    SaveMessageRequest:
+      type: object
+      properties:
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+      required:
+        - role
+        - content
+    DeleteResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+      required:
+        - success

@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Cortical AI"
+version = "1.0.0"
+id = "artifacts/cortical"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 18733
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/cortical run dev"
+
+[services.env]
+PORT = "18733"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/cortical", "run", "build"]
+publicDir = "artifacts/cortical/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"

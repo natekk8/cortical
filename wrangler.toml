@@ -1,0 +1,19 @@
+name = "cortical-frontend"
+type = "javascript"
+main = ".wrangler/tmp/index.js"
+compatibility_date = "2024-03-14"
+
+[build]
+command = "cd artifacts/cortical && pnpm install --ignore-scripts && NODE_OPTIONS='--max-old-space-size=4096' pnpm run build"
+cwd = "."
+watch_paths = ["artifacts/cortical/src/**/*.{ts,tsx}"]
+
+[build.upload]
+format = "modules"
+main = "src/index.ts"
+
+[env.production]
+name = "cortical-prod"
+
+[env.preview]
+name = "cortical-preview"

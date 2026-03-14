@@ -1,0 +1,19 @@
+packages:
+  "@supabase/supabase-js": "Authentication via magic link and OTP"
+  "framer-motion": "Complex animations for the Prime Max/Lite loaders and inactivity bubble"
+  "react-markdown": "Rendering markdown in AI responses"
+  "react-textarea-autosize": "Auto-expanding chat input"
+  "uuid": "Generating guest IDs"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility for merging tailwind classes safely"
+  "date-fns": "Formatting timestamps"
+
+images:
+  - path: "artifacts/cortical/public/images/auth-bg.png"
+    description: "Abstract ultra-modern dark gradient background with subtle neon red and deep grey fluid light leaks, sleek premium AI aesthetic"
+    aspect_ratio: "16:9"
+
+notes:
+  - Supabase integration requires VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to be set in the environment.
+  - The app uses the generated OpenAPI client to persist chats and messages to the workspace backend, while sending the actual prompt payload to the external n8n webhook for generation.
+  - Wouter is used for routing.
