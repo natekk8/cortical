@@ -36,4 +36,4 @@ VITE_SUPABASE_ANON_KEY = eyJxx...
    - VITE_SUPABASE_ANON_KEY = [z Cloudflare Env Variables]
 5. Deploy!
 
-App będzie dostępna na: `https://your-project.pages.dev`
+App będzie dostępna na: `https://cortical.pages.dev`
